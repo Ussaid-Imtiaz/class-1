@@ -1,0 +1,14 @@
+version : "3.9"
+
+services:
+  jupyter:
+    container_name : "jupyter"
+    hostname: 'jupyter'
+    build: 
+      context: ./hello-world
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./hello-world:/code/
+
+
